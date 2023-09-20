@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>English to Finnish Translator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #c5f7fc;
+            margin: 5;
+            padding: 5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 5px;
+            background-color: pink;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        textarea {
+            width: 99%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 12px;
+            resize: vertical;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .translation {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">English to Finnish Translator</h1>
+        
+        <form action="/" method="post">
+            <div class="form-group">
+                <label for="text_to_translate">Enter text to translate:</label>
+                <textarea id="text_to_translate" name="text_to_translate" placeholder="Type your English text here" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <input class="btn" type="submit" value="Translate">
+            </div>
+        </form>
+
+        {% if translated_text %}
+        <div class="translation">
+            <h2>Translated Text:</h2>
+            <p>{{ translated_text }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
