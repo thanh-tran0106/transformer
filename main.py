@@ -1,5 +1,5 @@
 # Import the required modules from the Transformers and Flask libraries.
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, render_template
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 # Start a Flask application
